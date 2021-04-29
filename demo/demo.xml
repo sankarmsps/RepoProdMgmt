@@ -1,0 +1,50 @@
+<odoo>
+    <data>
+
+    <record id="partner_myuser1" model="res.partner">
+        <field name="name">My User1</field>
+        <field name="company_id" ref="base.main_company"/>
+    </record>
+    <record id="user_myuser1" model="res.users">
+        <field name="name">My User1</field>
+        <field name="login">myuser1@odoo.com</field>
+        <field name="password">odoo</field>
+        <field name="partner_id" ref="partner_myuser1"/>
+        <field name="company_id" ref="base.main_company"/>
+        <field name="company_ids" eval="[(4, ref('base.main_company'))]"/>
+        <field name="signature"><![CDATA[<span>-- <br/>
+	My User1</span>]]></field>
+	<field name="groups_id" eval="[(4,ref('prod_mgmt.group_prod_manager'))]"/>
+    </record>
+
+
+
+
+<!--
+          <record id="object0" model="prod_mgmt.prod_mgmt">
+            <field name="name">Object 0</field>
+            <field name="value">0</field>
+          </record>
+
+          <record id="object1" model="prod_mgmt.prod_mgmt">
+            <field name="name">Object 1</field>
+            <field name="value">10</field>
+          </record>
+
+          <record id="object2" model="prod_mgmt.prod_mgmt">
+            <field name="name">Object 2</field>
+            <field name="value">20</field>
+          </record>
+
+          <record id="object3" model="prod_mgmt.prod_mgmt">
+            <field name="name">Object 3</field>
+            <field name="value">30</field>
+          </record>
+
+          <record id="object4" model="prod_mgmt.prod_mgmt">
+            <field name="name">Object 4</field>
+            <field name="value">40</field>
+          </record>
+-->
+    </data>
+</odoo>
